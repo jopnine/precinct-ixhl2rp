@@ -17,7 +17,7 @@ function FACTION:OnCharacterCreated(client, character)
 end
 
 function FACTION:GetDefaultName(client)
-	return "C17-RCT." .. Schema:ZeroNumber(math.random(1, 99999), 5), true
+	return "C17:UNION-RCT." .. Schema:ZeroNumber(math.random(1, 99999), 5), true
 end
 
 function FACTION:OnTransfered(client)
