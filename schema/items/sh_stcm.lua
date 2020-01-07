@@ -1,6 +1,6 @@
 
 ITEM.name = "STCM"
-ITEM.model = Model("models/dorado/tarjeta1.mdl")
+ITEM.model = Model("models/sky/cmuid.mdl")
 ITEM.description = "Um cartão usado para identificação de membros do setor médico do sindicato com o ID #%s, atribuído a %s."
 
 function ITEM:GetDescription()
