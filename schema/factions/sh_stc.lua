@@ -1,5 +1,6 @@
+
 FACTION.name = "Sindicato dos Trabalhadores Civis"
-FACTION.description = "Um indivíduo cujo propósito é servir a união universal."
+FACTION.description = "A regular human citizen enslaved by the Universal Union."
 FACTION.color = Color(150, 125, 100, 255)
 FACTION.models = {
 	"models/humans/rajio/female_01.mdl",
@@ -45,34 +46,26 @@ FACTION.models = {
 	"models/humans/rajio/male_22.mdl",
 	"models/humans/rajio/male_23.mdl",
 	"models/humans/rajio/male_26.mdl"
+	
 }
-
-
 
 function FACTION:OnCharacterCreated(client, character)
 	local id = Schema:ZeroNumber(math.random(1, 99999), 5)
 	local inventory = character:GetInventory()
+	local Timestamp = os.time()
+	local TimeString = os.date( "%H:%M:%S - %d/%m/%Y" , Timestamp )
 
 	character:SetData("cid", id)
-	
 
 	inventory:Add("suitcase", 1)
-	inventory:Add("uniformesindicato", 1)
-	inventory:Add("calcassindicato", 1)
 	inventory:Add("cid", 1, {
 		["citizen_name"] = character:GetName(),
-		["id"] = id,
-		["cwu"] = true,
-		["associated_character"] = character:GetID(),
-		["worker_id"] = math.random(0, 100)
-	})
-	inventory:Add("stc", 1, {
-		["citizen_name"] = character:GetName(),
-		["id"] = id,
+		["cid"] = id,
+		["issue_date"] = TimeString,
 		["cwu"] = true,
 		["associated_character"] = character:GetID(),
 		["worker_id"] = math.random(0, 100)
 	})
 end
 
-FACTION_STC = FACTION.index
+FACTION_CWU = FACTION.index
