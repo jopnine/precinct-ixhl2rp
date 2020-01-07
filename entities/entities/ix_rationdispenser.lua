@@ -135,7 +135,7 @@ if (SERVER) then
 			return
 		end
 
-		if (client:Team() == FACTION_CITIZEN or client:Team() == FACTION_STC or client:Team() == FACTION_VORTIGAUNT) then
+		if (client:Team() == FACTION_CITIZEN or client:Team() == FACTION_CWU or client:Team() == FACTION_VORTIGAUNT) then
 			if (!self:GetEnabled()) then
 				self:DisplayError(6)
 				return
@@ -164,7 +164,7 @@ if (SERVER) then
 									self:EmitSound("ambient/machines/combine_terminal_idle3.wav")
 
 									timer.Simple(10.2, function()
-										if (client:Team() == FACTION_STC) then
+										if (client:Team() == FACTION_CWU) then
 										racao = "loyalration"
 										self:StartDispense(racao)
 										end
@@ -197,7 +197,7 @@ if (SERVER) then
 													self:EmitSound("ambient/machines/combine_terminal_idle3.wav")
 				
 													timer.Simple(10.2, function()
-														if (client:Team() == FACTION_STC) then
+														if (client:Team() == FACTION_CWU) then
 														racao = "loyalration"
 														self:StartDispense(racao)
 														end
