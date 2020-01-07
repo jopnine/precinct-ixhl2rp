@@ -169,7 +169,7 @@ if (SERVER) then
 										self:StartDispense(racao)
 										end
 										if (client:Team() == FACTION_CITIZEN) then
-											racao = "loyalration"
+											racao = "ration"
 											self:StartDispense(racao)
 										end
 										if (client:Team() == FACTION_VORTIGAUNT) then
@@ -202,7 +202,7 @@ if (SERVER) then
 														self:StartDispense(racao)
 														end
 														if (client:Team() == FACTION_CITIZEN) then
-															racao = "loyalration"
+															racao = "ration"
 															self:StartDispense(racao)
 														end
 														if (client:Team() == FACTION_VORTIGAUNT) then
