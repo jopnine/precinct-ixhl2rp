@@ -1,8 +1,7 @@
 
-FACTION.name = "Citizen"
+FACTION.name = "Cidadão"
 FACTION.description = "A regular human citizen enslaved by the Universal Union."
 FACTION.color = Color(150, 125, 100, 255)
-FACTION.isDefault = true
 FACTION.models = {
 	"models/humans/rajio/female_01.mdl",
 	"models/humans/rajio/female_02.mdl",
@@ -49,17 +48,21 @@ FACTION.models = {
 	"models/humans/rajio/male_26.mdl"
 	
 }
+FACTION.isDefault = true
 
 function FACTION:OnCharacterCreated(client, character)
 	local id = Schema:ZeroNumber(math.random(1, 99999), 5)
 	local inventory = character:GetInventory()
-	
+
 	character:SetData("cid", id)
-		
+
 	inventory:Add("suitcase", 1)
-	inventory:Add("cid", 1, {
+	local Timestamp = os.time()
+		local TimeString = os.date( "%H:%M:%S - %d/%m/%Y" , Timestamp )
+	inventory:Add("transfer_papers", 1, {
 		citizen_name = character:GetName(),
-		id = id	
+		unique = math.random(0000000,999999999),
+		issue_date = tostring(TimeString)
 	})
 end
 
