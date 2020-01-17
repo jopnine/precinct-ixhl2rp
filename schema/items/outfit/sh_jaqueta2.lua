@@ -5,9 +5,8 @@ ITEM.skin = 3
 ITEM.outfitCategory = "Shirts"
 ITEM.flag = "v"
 ITEM.weight = 0.4
-ITEM.category = "Roupas"
-ITEM.permit = "roupas"
-ITEM.price = 30
+ITEM.width = 1
+ITEM.height = 1
 
 ITEM.bodyGroups = {
 	["torso"] = 7

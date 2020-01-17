@@ -4,6 +4,8 @@ ITEM.model = Model("models/tnb/items/shirt_citizen1.mdl")
 ITEM.outfitCategory = "Shirts"
 ITEM.flag = "v"
 ITEM.weight = 0.4
+ITEM.width = 1
+ITEM.height = 1
 
 ITEM.bodyGroups = {
 	["torso"] = 1
