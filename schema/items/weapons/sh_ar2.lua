@@ -1,7 +1,7 @@
 ITEM.name = "Rifle de Pulso"
 ITEM.description = "Um rifle de assalto energizado por energia negra."
 ITEM.model = "models/weapons/w_irifle.mdl"
-ITEM.class = "weapon_ar2"
+ITEM.class = "tfa_mmod_ar2"
 ITEM.weaponCategory = "primary"
 ITEM.classes = {CLASS_EOW}
 ITEM.width = 4

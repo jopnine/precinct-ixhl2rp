@@ -69,7 +69,7 @@ local NEW_RECIPES = {
 	},
 	["atadura_com_tecido"] = {
 		["name"] = "Costurar: Atadura",
-		["model"] = "models/props_wasteland/prison_toiletchunk01f.mdl",
+		["model"] = "models/aphelion/props_junk/gauze_tape.mdl",
 		["desc"] = "Rolo de gaze feita a tecido velho.",
 		["requirements"] = {["cloth_scrap"] = 3},
 		["results"] = {["bandage"] = 1},
@@ -80,7 +80,7 @@ local NEW_RECIPES = {
 		["name"] = "Costurar: Tecidos",
 		["model"] = "models/props_debris/concrete_chunk04a.mdl",
 		["desc"] = "Costure e renove tecidos velhos.",
-		["requirements"] = {["cloth_scrap"] = 2, ["lamina"] = 1},
+		["requirements"] = {["cloth_scrap"] = 2, ["scissors"] = 1},
 		["results"] = {["sewn_cloth"] = 1},
 		["category"] = "Costura"
 	},
@@ -96,7 +96,7 @@ local NEW_RECIPES = {
 		["name"] = "Costurar: Luvas",
 		["model"] = "models/tnb/items/gloves.mdl",
 		["desc"] = "Costure um par de luvas usando tecidos renovados.",
-		["requirements"] = {["sewn_cloth"] = 4, ["lamina"] = 1},
+		["requirements"] = {["sewn_cloth"] = 4, ["scissors"] = 1},
 		["results"] = {["luvas"] = 1},
 		["category"] = "Costura"
 	},
@@ -112,7 +112,7 @@ local NEW_RECIPES = {
 		["name"] = "Costurar: Touca",
 		["model"] = "models/tnb/items/beanie.mdl",
 		["desc"] = "Costure uma touca de lã usando tecidos renovados.",
-		["requirements"] = {["sewn_cloth"] = 4, ["lamina"] = 1},
+		["requirements"] = {["sewn_cloth"] = 4, ["scissors"] = 1},
 		["results"] = {["touca"] = 1},
 		["category"] = "Costura"
 	},
@@ -128,7 +128,7 @@ local NEW_RECIPES = {
 		["name"] = "Costurar: Bolsa",
 		["model"] = "models/hl2rp/items/bag.mdl",
 		["desc"] = "Costure uma bolsa simples usando tecidos renovados.",
-		["requirements"] = {["sewn_cloth"] = 6, ["lamina"] = 1},
+		["requirements"] = {["sewn_cloth"] = 6, ["scissors"] = 1},
 		["results"] = {["bolsa"] = 1},
 		["category"] = "Costura"
 	},

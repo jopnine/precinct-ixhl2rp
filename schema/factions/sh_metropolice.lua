@@ -3,7 +3,7 @@ FACTION.name = "Metropolice Force"
 FACTION.description = "A metropolice unit working as Civil Protection."
 FACTION.color = Color(50, 100, 150)
 FACTION.pay = 10
-FACTION.models = {"models/dpfilms/metropolice/hdpolice.mdl"}
+FACTION.models = {"models/police.mdl"}
 FACTION.weapons = {"ix_stunstick"}
 FACTION.isDefault = false
 FACTION.isGloballyRecognized = true
@@ -17,7 +17,7 @@ function FACTION:OnCharacterCreated(client, character)
 end
 
 function FACTION:GetDefaultName(client)
-	return "C17-RCT." .. Schema:ZeroNumber(math.random(1, 99999), 5), true
+	return "C17:UNION-RCT." .. Schema:ZeroNumber(math.random(1, 99999), 5), true
 end
 
 function FACTION:OnTransfered(client)

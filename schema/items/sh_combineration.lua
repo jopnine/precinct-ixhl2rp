@@ -1,7 +1,7 @@
 ITEM.name = "Ração Metropolitana"
-ITEM.model = Model("models/weapons/w_packatm.mdll")
+ITEM.model = Model("models/weapons/w_packatm.mdl")
 ITEM.description = "Uma embalagem preta de alumínio duro com o símbolo da união estampado na frente."
-ITEM.items = {"metropolitana", "agua_saborosa"}
+ITEM.items = {"metropolitana", "agua_metropolitana"}
 
 ITEM.functions.Abrir = {
 	OnRun = function(itemTable)

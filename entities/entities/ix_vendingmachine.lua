@@ -12,9 +12,9 @@ ENT.bNoPersist = true
 ENT.MaxRenderDistance = math.pow(256, 2)
 ENT.MaxStock = 4
 ENT.Items = {
-	{"REGULAR", "water", 15},
-	{"GASOSA", "water_sparkling", 25},
-	{"SABOROSA", "water_special", 35}
+	{"REGULAR", "agua", 7},
+	{"GASOSA", "agua_gaseificada", 13},
+	{"SABOROSA", "agua_saborosa", 20}
 }
 
 function ENT:GetStock(id)

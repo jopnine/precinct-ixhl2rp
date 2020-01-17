@@ -122,14 +122,14 @@ if (SERVER) then
 	function ENT:Use(client)
 		--TODO: fix double UI opening.
 		if self:GetNetVar("destroyed", false) == true then
-			client:Notify("Esta máquina foi destruida!")
+			client:Notify("This machine has been destroyed!")
 			client:EmitSound("buttons/combine_button_locked.wav", 100, 110)
 
 			return
 		end
 		for k, v in pairs(client:GetCharacter():GetInventory():GetItems()) do
 			if v.uniqueID == "cid" then
-				if v:GetData("citizen_name") and v:GetData("id") then
+				if v:GetData("citizen_name") and v:GetData("cid") then
 					netstream.Start(client, "LoyaltyOpen", {self})
 					client:EmitSound("buttons/combine_button2.wav", 100, 150)
 					return
@@ -140,8 +140,7 @@ if (SERVER) then
 				self:DisplayError(7, 4)
 			end
 		end
-		
-		if (!self.canUse or self.nextUseTime > CurTime()) then
+		--[[if (!self.canUse or self.nextUseTime > CurTime()) then
 			return
 		end
 
@@ -183,7 +182,7 @@ if (SERVER) then
 
 			Schema:SaveRationDispensers()
 			self.nextUseTime = CurTime() + 2
-		end
+		end--]]
 	end
 
 	function ENT:OnRemove()

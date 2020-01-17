@@ -1,6 +1,6 @@
 
 ITEM.name = "Atadura"
-ITEM.model = Model("models/props_wasteland/prison_toiletchunk01f.mdl")
+ITEM.model = Model("models/aphelion/props_junk/gauze_tape.mdl")
 ITEM.description = "Um rolo de curativo caseiro para estancar sangramentos."
 ITEM.category = "Medicina"
 ITEM.permit = "medicina"

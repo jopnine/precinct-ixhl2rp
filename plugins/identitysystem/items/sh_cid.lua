@@ -1,6 +1,6 @@
-ITEM.name = "Cartão de Identidade"
-ITEM.model = Model("models/dorado/tarjeta3.mdl")
-ITEM.description = "Um cartão de identificação simples, padronizado pela União. Contém o nome e o ID do indivíduo."
+ITEM.name = "Cartão de Cidadania"
+ITEM.model = Model("models/sky/cid.mdl")
+ITEM.description = "Um cartão padronizado pela União que contém o nome e o ID do indivíduo com a posse."
 
 function ITEM:GetDescription()
 	return self.description
@@ -17,9 +17,9 @@ end
 --dynamiC MODELS BRUH
 function ITEM:GetModel()
 	if self:IsCWU() then
-		return "models/dorado/tarjeta2.mdl"
+		return "models/sky/cwuid.mdl"
 	elseif self:IsCombine() then
-		return "models/dorado/tarjetazero.mdl"
+		return "models/dorado/tarjeta2.mdl"
 	else
 		return self.model
 	end
@@ -29,7 +29,7 @@ function ITEM:PopulateTooltip(tooltip)
 	if not self:IsCWU() and not self:IsCombine() then
 		local data = tooltip:AddRow("data")
 		data:SetBackgroundColor(derma.GetColor("Success", tooltip))
-		data:SetText("Name: " .. self:GetData("citizen_name", "Unissued") .. "\nID Number: " .. self:GetData("id", "00000"))
+		data:SetText("Name: " .. self:GetData("citizen_name", "Unissued") .. "\nID Number: " .. self:GetData("cid", "00000"))
 		data:SetFont("BudgetLabel")
 		data:SetExpensiveShadow(0.5)
 		data:SizeToContents()
@@ -38,7 +38,7 @@ function ITEM:PopulateTooltip(tooltip)
 	if self:IsCWU() then
 		local data = tooltip:AddRow("data")
 		data:SetBackgroundColor(derma.GetColor("Success", tooltip))
-		data:SetText("Name: " .. self:GetData("citizen_name", "Unissued") .. "\nID Number: " .. self:GetData("id", "00000") .. "\nWorker ID: " .. self:GetData("worker_id", "NO ID! CONTACT DEVELOPER!"))
+		data:SetText("Name: " .. self:GetData("citizen_name", "Unissued") .. "\nID Number: " .. self:GetData("cid", "00000") .. "\nWorker ID: " .. self:GetData("worker_id", "NO ID! CONTACT DEVELOPER!"))
 		data:SetFont("BudgetLabel")
 		data:SetExpensiveShadow(0.5)
 		data:SizeToContents()
@@ -47,7 +47,7 @@ function ITEM:PopulateTooltip(tooltip)
 	if self:IsCombine() then
 		local data = tooltip:AddRow("data")
 		data:SetBackgroundColor(derma.GetColor("Success", tooltip))
-		data:SetText("Unit Identifier: " .. string.match(self:GetData("citizen_name", "NO NAME"), "%d%d%d") .. "\nUnit Rank: " .. self:GetCPRank() .. "\nIssue Date: " .. self:GetData("issue_date", "Unissued") .. "\nFull Identifier: " .. self:GetCPName() .. "\nService Number: " .. self:GetData("service_number", "no num"))
+		data:SetText("Unit Identifier: " .. string.match(self:GetData("citizen_name", "NO NAME"), "%d%d%d") .. "\nUnit Rank: " .. self:GetCPRank() .. "\nFull Identifier: " .. self:GetCPName() .. "\nService Number: " .. self:GetData("service_number", "no num"))
 		data:SetFont("BudgetLabel")
 		data:SetExpensiveShadow(0.5)
 		data:SizeToContents()
@@ -55,7 +55,7 @@ function ITEM:PopulateTooltip(tooltip)
 
 	local warning = tooltip:AddRow("warning")
 	warning:SetBackgroundColor(derma.GetColor("Error", tooltip))
-	warning:SetText("Cada cartão contém uma foto 3x4 digitalizada impressa no papel com uma foto do indivíduo. Não é bom ser pego com o cartão de outra pessoa.")
+	warning:SetText("Cada cartão possui um número de identidade único e uma foto 3x4 do indivíduo impressa no papel. Seria uma péssima idéia ser pego um um cartão que não lhe pertence.")
 	warning:SetFont("DermaDefault")
 	warning:SetExpensiveShadow(0.5)
 	warning:SizeToContents()
@@ -63,7 +63,7 @@ function ITEM:PopulateTooltip(tooltip)
 	if self:IsCombine() then
 		local warning2 = tooltip:AddRow("warning2")
 		warning2:SetBackgroundColor(derma.GetColor("Error", tooltip))
-		warning2:SetText("Cartão de acesso correspondente ao oficial da CCA responsável. Caso perca este cartão, o portador será extinguido da autoria cívica.")
+		warning2:SetText("This is your ID card, it allows you access to everything you have been granted as a CCA officer. If you lose this card, you will be deserviced. Even if it is stolen from you.")
 		warning2:SetFont("DermaDefault")
 		warning2:SetExpensiveShadow(0.5)
 		warning2:SizeToContents()

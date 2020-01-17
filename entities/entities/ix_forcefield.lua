@@ -1,4 +1,3 @@
-
 AddCSLuaFile()
 
 ENT.Type = "anim"
@@ -150,7 +149,7 @@ if (SERVER) then
 			function(client)
 				return true
 			end,
-			"Nunca permitir cidadões."
+			"Nunca permitir cidadãos."
 		},
 		{
 		function(client)
@@ -180,7 +179,7 @@ if (SERVER) then
 			function(client)
 				local character = client:GetCharacter()
 
-				if (character and character:GetInventory() and !character:GetInventory():HasItem("stcp")) then
+				if (character and character:GetInventory() and !character:GetInventory():HasItem("stcm")) then
 					return true
 				else
 					return false

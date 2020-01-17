@@ -8,6 +8,7 @@ ITEM.permit = "roupas"
 ITEM.skin = 1
 ITEM.price = 20
 
+
 ITEM.bodyGroups = {
 	["bag"] = 1
 }

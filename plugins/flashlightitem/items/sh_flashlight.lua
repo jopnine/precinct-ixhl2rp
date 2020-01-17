@@ -1,9 +1,9 @@
 
-ITEM.name = "Flashlight"
-ITEM.model = Model("models/Items/battery.mdl")
+ITEM.name = "Lanterna"
+ITEM.model = Model("models/pg_props/pg_obj/pg_flashlight.mdl")
 ITEM.width = 1
 ITEM.height = 1
-ITEM.description = "A standard flashlight that can be toggled."
+ITEM.description = "Uma lanterna comum que pode ser desativada e ativada."
 ITEM.category = "Tools"
 
 ITEM:Hook("drop", function(item)

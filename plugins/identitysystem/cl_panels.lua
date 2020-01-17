@@ -240,28 +240,29 @@ local PANEL = {}
 
 function PANEL:Init()
 	ix.gui.cidcreator = self
-	self:SetSize(ScrW() / 4, ScrH() / 7)
+	self:SetSize(225,300)
 	self:Center()
+	self:SetTitle("                     Terminal de CID")
 	self:MakePopup()
 	self:SetBackgroundBlur(true)
 	self.toptext = self:Add("DLabel")
 	self.toptext:SetContentAlignment(5)
 	self.toptext:Dock(TOP)
-	self.toptext:SetText("Automatic Registration Center")
+	self.toptext:SetText("Terminal de Registro do CID")
 	self.toptext:SetExpensiveShadow(2)
 	self.toptext:SetFont("ixSmallFont")
 	self.toptext:SetTall(32)
 	self.nametext = self:Add("DLabel")
 	self.nametext:SetContentAlignment(5)
 	self.nametext:Dock(TOP)
-	self.nametext:SetText("Input Name")
+	self.nametext:SetText("Nome do Cidadão")
 	self.nametext:SetExpensiveShadow(2)
 	self.nametext:SetFont("ixSmallFont")
 	self.nameinput = self:Add("DTextEntry")
 	self.nameinput:Dock(TOP)
 	self.itemswang = self:Add("DComboBox")
 	self.itemswang:Dock(BOTTOM)
-	self.itemswang:SetValue("Or select a transfer card.")
+	self.itemswang:SetValue("Ou selecione um cartão de transferência.")
 
 	self.itemswang.OnSelect = function()
 		self.nameinput:SetDisabled(true)
@@ -270,7 +271,7 @@ function PANEL:Init()
 
 	self.submitbutton = self:Add("DButton")
 	self.submitbutton:Dock(BOTTOM)
-	self.submitbutton:SetText("Submit")
+	self.submitbutton:SetText("Registrar")
 
 	for k, v in pairs(LocalPlayer():GetCharacter():GetInventory():GetItems()) do
 		if v.uniqueID == "transfer_papers" then
@@ -286,11 +287,11 @@ function PANEL:Init()
 		if string.len(ix.gui.cidcreator.nameinput:GetText()) > 1 then
 			netstream.Start("SubmitNewCID", {ix.gui.cidcreator.nameinput:GetText()})
 			ix.gui.cidcreator:Close()
-		elseif ix.gui.cidcreator.itemswang:GetSelected() ~= "Or select a transfer card." then
+		elseif ix.gui.cidcreator.itemswang:GetSelected() ~= "Ou selecione um cartão de transferência." then
 			netstream.Start("SubmitNewCID", {ix.gui.cidcreator.itemswang:GetSelected()})
 			ix.gui.cidcreator:Close()
 		else
-			LocalPlayer():Notify("You need to input a name or select a transfer card!")
+			LocalPlayer():Notify("Você precisa colocar um nome ou de um cartão de transferência!")
 		end
 	end
 end

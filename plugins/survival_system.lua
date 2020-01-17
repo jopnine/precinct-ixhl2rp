@@ -222,19 +222,37 @@ local hunger_items = {
 		["thirst"] = 20,
 		["permit"] = "consumiveis"
 	},
-
 	["agua_gaseificada"] = {
 		["name"] = "Água Gaseificada",
-		["model"] = "models/props_nunk/popcan01a.mdl",
+		["model"] = "models/props_lunk/popcan01a.mdl",
+		["skin"] = 1,
 		["desc"] = "Uma lata amarela de água gaseificada de marca que foi patenteado pela união, é refrescante.",
 		["thirst"] = 30,
 		["permit"] = "consumiveis"
 	},
 	["agua_saborosa"] = {
 		["name"] = "Água Saborificada",
-		["model"] = "models/props_cunk/popcan01a.mdl",
+		["model"] = "models/props_lunk/popcan01a.mdl",
+		["skin"] = 2,
 		["desc"] = "Uma lata amarela com água adocicada do reservatório Breen que foi patenteado pela união, seu gosto é saboroso.",
 		["thirst"] = 40,
+		["permit"] = "consumiveis"
+	},
+	["agua_biotica"] = {
+		["name"] = "Água Biótica",
+		["model"] = "models/props_cunk/popcan01a.mdl",
+		["skin"] = 2,
+		["desc"] = "Uma lata verde com água amarelada, seu gosto é podre e o fluído parece estranho.",
+		["thirst"] = 20,
+		["permit"] = "consumiveis"
+	},
+	["agua_metropolitana"] = {
+		["name"] = "Água Metropolitana",
+		["model"] = "models/props_cunk/popcan01a.mdl",
+		["skin"] = 1,
+		["desc"] = "Uma lata de alumínio preta com o símbolo da união estampado, seu gosto é forte e doce.",
+		["thirst"] = 50,
+		["hunger"] = 5,
 		["permit"] = "consumiveis"
 	},
 	["cerveja"] = {
@@ -245,7 +263,7 @@ local hunger_items = {
 		["permit"] = "consumiveis"
 	},
 	["cerveja2"] = {
-		["name"] = "Cerveja Sintética",
+		["name"] = "Cerveja",
 		["model"] = "models/props_junk/glassbottle01a.mdl",
 		["desc"] = "Uma garrafa de cerveja, o odor implica uma quantia substâncial de álcool, é antiga e não possui nenhum selo da união.",
 		["illegal"] = true,
@@ -329,14 +347,14 @@ local hunger_items = {
 	},
 	["vodka"] = {
 		["name"] = "Vodka",
-		["model"] = "models/bioshockinfinite/pound_cheese.mdl",
+		["model"] = "models/props_junk/garbage_glassbottle002a.mdl",
 		["desc"] = "Uma garrafa de vodka, com um enorme teor alcoólico, o odor deixa isso claro, ela é antiga e não tem nenhum selo da união.",
 		["illegal"] = true,
 		["thirst"] = 30
 	},
 	["supplements"] = {
 		["name"] = "Suplementos",
-		["model"] = "models/pg_plops/pg_food/pg_tortellinan.mdl",
+		["model"] = "models/pg_plops/pg_food/pg_tortellinar.mdl",
 		["desc"] = "Um pacote extremamente leve com apenas alguns miligramas de comida dentro. O gosto é horrível.",
 		["hunger"] = 7
 	},
@@ -398,6 +416,7 @@ for k, v in pairs(hunger_items) do
 	ITEM.height = v.height or 1
 	ITEM.category = "Consumiveis"
 	ITEM.permit = v.permit
+	ITEM.skin = v.skin or 0
 	ITEM.hunger = v.hunger or 0
 	ITEM.thirst = v.thirst or 0
 	ITEM.empty = v.empty or false

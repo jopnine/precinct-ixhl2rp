@@ -74,7 +74,7 @@ ix.command.Add("RollStat", {
 			local bonus = character:GetAttribute(stat, 0)
 			local roll = tostring(math.random(0, 20))
 
-			ix.chat.Send(client, "roll", (roll + bonus).." ( "..roll.." + "..bonus.." )", nil, nil, { --tostring(math.random(0, 100))
+			ix.chat.Send(client, "roll", (roll + bonus).." ( "..roll.." + "..bonus.." )", "out of 20", nil, nil, { --tostring(math.random(0, 100))
 				max = maximum
 			})
 		end

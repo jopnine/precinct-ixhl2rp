@@ -1,7 +1,7 @@
 ITEM.name = "Granada"
 ITEM.description = "Uma pequena, verde granada MK3A2 que explode depois de alguns segundos depois de jogada."
 ITEM.model = "models/weapons/w_grenade.mdl"
-ITEM.class = "weapon_frag"
+ITEM.class = "tfa_mmod_grenade"
 ITEM.weaponCategory = "grenade"
 ITEM.classes = {CLASS_EOW}
 ITEM.flag = "V"

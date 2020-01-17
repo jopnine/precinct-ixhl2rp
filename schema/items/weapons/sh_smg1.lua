@@ -1,7 +1,7 @@
 ITEM.name = "MP7"
 ITEM.description = "Uma submetralhadora MP7 com alta taxa de disparo."
 ITEM.model = "models/weapons/w_smg1.mdl"
-ITEM.class = "weapon_smg1"
+ITEM.class = "tfa_mmod_smg"
 ITEM.weaponCategory = "primary"
 ITEM.classes = {CLASS_EMP, CLASS_EOW}
 ITEM.flag = "V"

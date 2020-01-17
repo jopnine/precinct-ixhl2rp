@@ -171,7 +171,7 @@ ITEMS.bullet_casings = {
 	["description"] = "Um conjunto de estojo de balas usadas.",
 	["width"] = 1,
 	["height"] = 1,
-	["chance"] = 85
+	["chance"] = 50
 }
 
 ITEMS.gunpowder = {
@@ -211,42 +211,112 @@ ITEMS.wood_piece = {
 }
 
 ITEMS.scrap_hammer = {
-	["name"] = "Martelo de Sucata",
-	["model"] = "models/props_interiors/pot02a.mdl",
+	["name"] = "Martelo",
+	["model"] = "models/props_tools/hammer.mdl",
 	["description"] = "Um martelo fraco dado a vida por diversas ferramentas",
 	["width"] = 1,
 	["height"] = 2,
-	["chance"] = 80
+	["chance"] = 45,
+	["tool"] = true
 }
 
-ITEMS.normal_screwdriver = {
+ITEMS.screwdriver = {
 	["name"] = "Chave de Fenda",
-	["model"] = "models/props_c17/TrapPropeller_Lever.mdl",
-	["description"] = "Uma Chave de Fenda completa.",
+	["model"] = "models/props_tools/screwdriver_a.mdl",
+	["description"] = "Uma chave de fenda completa.",
 	["width"] = 2,
 	["height"] = 1,
 	["chance"] = 20,
 	["tool"] = true
 }
 
+ITEMS.scissors = {
+	["name"] = "Tesoura",
+	["model"] = "models/props_questionableethics/scissors.mdl",
+	["description"] = "Objeto fino de lâminas cortantes. Possuí pontas afiadas, porém está enferrujada.",
+	["width"] = 1,
+	["height"] = 1,
+	["chance"] = 10,
+	["tool"] = true
+}
+
+ITEMS.scrap_pliers = {
+	["name"] = "Alicate",
+	["model"] = "models/props_tools/pliers_002.mdl",
+	["description"] = "Ferramenta antiga e enferrujada feita a partir de diversas outras ferramentas.",
+	["width"] = 1,
+	["height"] = 1,
+	["chance"] = 20,
+	["tool"] = true
+}
+
+ITEMS.hacksaw = {
+	["name"] = "Serra",
+	["model"] = "models/props_tools/hacksaw.mdl",
+	["description"] = "Uma pequena serra de metal feita para cortar materiais.",
+	["width"] = 2,
+	["height"] = 1,
+	["chance"] = 20,
+	["tool"] = true
+}
+	
+ITEMS.pliers = {
+	["name"] = "Alicate",
+	["model"] = "models/props_tools/pliers_001.mdl",
+	["description"] = "É uma ferramenta articulada que serve fundamentalmente para multiplicar a força aplicada pelo usuário.",
+	["width"] = 1,
+	["height"] = 1,
+	["chance"] = 10,
+	["tool"] = true
+}
+
+ITEMS.furadeira = {
+	["name"] = "Furadeira",
+	["model"] = "models/props_tools/cordless_drill_a.mdl",
+	["description"] = "Uma máquina complexa que tem como função principal a execução de furos, ela funciona a partir de baterias.",
+	["width"] = 2,
+	["height"] = 1,
+	["chance"] = 2,
+	["tool"] = true
+}
+
 ITEMS.chave_inglesa = {
 	["name"] = "Chave Inglesa",
-	["model"] = "models/props_c17/tools_wrench01a.mdl",
+	["model"] = "models/props_tools/wrench_a.mdl",
 	["description"] = "Uma chave inglesa enferrujada, útil para encaixar peças.",
 	["width"] = 2,
 	["height"] = 1,
 	["chance"] = 20,
 	["tool"] = true
 }
-
 ITEMS.lamina = {
 	["name"] = "Lâmina",
 	["model"] = "models/props_c17/canisterchunk01m.mdl",
-	["description"] = "Uma lâmina afiada e quebrada, ainda serve para realizar cortes.",
+	["description"] = "Uma lâmina afiada e quebrada.",
 	["width"] = 1,
 	["height"] = 1,
-	["chance"] = 20,
-	["tool"] = true
+	["chance"] = 20
+}
+ITEMS.mola = {
+	["name"] = "Mola",
+	["model"] = "models/crossbow_bolt.mdl",
+	["description"] = "Uma mola média de grande potencial elástico.",
+	["chance"] = 40
+}
+ITEMS.bateria = {
+	["name"] = "Bateria",
+	["model"] = "models/Items/battery.mdl",
+	["description"] = "Uma bateria ALF+ funcionando e totalmente carregada.",
+	["width"] = 1,
+	["height"] = 2,
+	["chance"] = 2 
+}
+ITEMS.essencia_grub = {
+	["name"] = "Essência de Grub",
+	["model"] = "models/grub_nugget_large.mdl",
+	["description"] = "Uma bola amarela e gosmenta, deixa um resíduo verde ao tocar em mãos.",
+	["width"] = 1,
+	["height"] = 1
 }
 
 for k, v in pairs(ITEMS) do

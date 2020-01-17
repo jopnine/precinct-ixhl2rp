@@ -160,7 +160,7 @@ if CLIENT then
 				-- draw text
 				if v:IsCombine() then
 
-					MatrixText(division .. rank .. "" .. digits, "FaceRecog", headpos.x + size / 1.9, headpos.y - size * 0.9, Color(team_color.r, team_color.g, team_color.b, alphas[v:EntIndex()]), Vector(name_size / scale, name_size / scale, 1))
+					
 					-- scaling with random numbers sure is fun
 					--MatrixText("RANK: " .. rank, "FaceRecog", headpos.x + size / 1.9, headpos.y - size / 2, Color(255, 255, 255, alphas[v:EntIndex()]), Vector(0.05 / scale, 0.05 / scale, 1))
 					MatrixText("ASSESSMENT: " .. assessment, "FaceRecog", headpos.x + size / 1.9, headpos.y - size / 4, Color(255, 255, 255, alphas[v:EntIndex()]), Vector(0.05 / scale, 0.05 / scale, 1))
@@ -195,3 +195,4 @@ if CLIENT then
 		end
 	end
 end
+//Denzel Washington was here.

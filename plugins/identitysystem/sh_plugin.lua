@@ -10,14 +10,14 @@ ix.command.Add("ViewData", {
 	OnRun = function(self, client, cid)
 		--TODO: Add offline viewing.
 		for k, v in pairs(ix.item.instances) do
-			if v:GetData("id", 000000) == cid then
+			if v:GetData("cid", 000000) == cid then
 				netstream.Start(client, "OpenRecordMenu", {v.id})
 
 				return
 			else
 				local query = mysql:Select("ix_items")
 				query:Select("data")
-				query:Where("id", cid)
+				query:Where("cid", cid)
 				query:Callback(function(results) 
 					PrintTable(results)
 				end)
@@ -69,7 +69,7 @@ else
 
 			local data2 = {
 				["citizen_name"] = data[1],
-				["id"] = math.random(10000, 99999),
+				["cid"] = math.random(10000, 99999),
 				["issue_date"] = TimeString,
 				["officer"] = ply:Name()
 			}

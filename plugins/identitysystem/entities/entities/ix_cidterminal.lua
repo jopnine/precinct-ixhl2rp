@@ -46,14 +46,14 @@ if SERVER then
 
 	function ENT:Use(user)
 		if self:GetNetVar("destroyed", false) then
-			user:Notify("Este terminal foi destruido!")
+			user:Notify("Esse terminal foi destruído!")
 			self:EmitSound("buttons/combine_button_locked.wav")
 
 			return
 		end
 
 		if user:IsCombine() then
-			user:SetAction("Entrando...", 1, function()
+			user:SetAction("Logando no sistema...", 1, function()
 				netstream.Start(user, "OpenCIDMenu", {})
 				user:Freeze(false)
 			end)
@@ -62,7 +62,7 @@ if SERVER then
 			user:SelectWeapon("ix_hands")
 			user:Freeze(true)
 		else
-			user:Notify("O terminal não responde ao seu cartão de identificação.")
+			user:Notify("Seu CID não é autorizado a operar este terminal.")
 		end
 	end
 else
@@ -102,11 +102,11 @@ else
 				draw.SimpleText("ERR-...", "panel_font", 5, 46, Color(102, 255, 255, alpha))
 			end
 
-			draw.SimpleText("Terminal de CIDs", "panel_font", width / 2, 25, Color(90, 210, 255, alpha), TEXT_ALIGN_CENTER)
-			draw.SimpleText("Esperando dados", "panel_font", width / 2, height - 16, Color(205, 255, 180, alpha), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+			draw.SimpleText("Terminal da criação do CID", "panel_font", width / 2, 25, Color(90, 210, 255, alpha), TEXT_ALIGN_CENTER)
+			draw.SimpleText("Insira o CID para validação...", "panel_font", width / 2, height - 16, Color(205, 255, 180, alpha), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
 		else
 			draw.SimpleText(LocalPlayer():SteamID64(), "panel_font", 5, 36, Color(90, 210, 255, alpha))
-			draw.SimpleText("Validando dados...", "panel_font", 5, 46, Color(102, 255, 255, alpha))
+			draw.SimpleText("Processando...", "panel_font", 5, 46, Color(102, 255, 255, alpha))
 		end
 
 		cam.End3D2D()

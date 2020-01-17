@@ -1,7 +1,7 @@
 ITEM.name = "Ração Biótica"
 ITEM.model = Model("models/weapons/w_packatb.mdl")
 ITEM.description = "Uma embalagem verde e podre, você consegue ouvir coisas se mexendo dentro."
-ITEM.items = {"bioticos", "agua"}
+ITEM.items = {"bioticos", "agua_biotica"}
 
 ITEM.functions.Abrir = {
 	OnRun = function(itemTable)
