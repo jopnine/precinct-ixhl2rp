@@ -1,6 +1,6 @@
 
 Schema.name = "HL2 RP"
-Schema.author = "nebulous.cloud"
+Schema.author = "nebulous.cloud, Jopnine & Noise"
 Schema.description = "A schema based on Half-Life 2."
 
 -- Include netstream
